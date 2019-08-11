@@ -6,7 +6,15 @@ document.getElementById("malicious");
 alert("Debug from https://mywebguard-thirdparty.github.io: localStorage.getItem('mywebguard')="+
       localStorage.getItem('mywebguard'));
 
-//test case 3: ajax
+//test case 3: document.cookie
+if (document.cookie.indexOf("mywebguard")>0) {
+  alert("Debug from https://mywebguard-thirdparty.github.io: document.cookie="+
+      document.cookie);
+}else
+  document.cookie="mywebguard=mywebguard-cookie-test";
+
+
+//test case 4: Ajax
 function ajaxTest() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
