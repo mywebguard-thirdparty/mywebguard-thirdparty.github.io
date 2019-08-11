@@ -7,7 +7,7 @@ alert("Debug from https://mywebguard-thirdparty.github.io: localStorage.getItem(
       localStorage.getItem('mywebguard'));
 
 //test case 3: document.cookie
-if (document.cookie && document.cookie.indexOf("mywebguard")>0) {
+if (document.cookie && document.cookie.indexOf("mywebguard")>=0) {
   alert("Debug from https://mywebguard-thirdparty.github.io: document.cookie="+
       document.cookie);
 }else
